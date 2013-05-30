@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Drawings</title>
+		<link href="lightbox/css/lightbox.css" rel="stylesheet" />
 		<link href='http://fonts.googleapis.com/css?family=Petit+Formal+Script' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Eagle+Lake' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Kotta+One' rel='stylesheet' type='text/css'>
@@ -76,7 +77,7 @@
 				padding: 0;
 				margin: 0;
 			}
-			a {
+			nav a {
 
 				display: block;
 				line-height: 30px;
@@ -92,7 +93,7 @@
 
 			}
 
-			a:hover {
+			nav a:hover {
 				background-color: #F13C76;
 				border-radius: 10px;
 				color: white;
@@ -104,54 +105,15 @@
 
 			}
 
-			div#fondnoir {
-				background-color: rgba(0,0,0,0.5);
-				position: fixed;
-				top: 0px;
-				left: 0px;
-				width: 100%;
-				height: 100%;
-				display: none;
-				z-index: 2;
-			}
-
-			div#fondnoir figure {
-				background-color: white;
-				width: 50%;
-				margin: 0 auto;
-				height: 90%;
-				margin-top: 5%;
-				box-shadow: 0 0 20px rgba(0,0,0,0.5);
-				text-align: center;
-			}
-
-			div#fondnoir figure img {
-				height: 90%;
-				margin-top: 5%;
-			}
-
 		</style>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script type="text/javascript">
-			$( document ).ready(function() {
-				$( "#post img" ).click(function( event ) {
-					$("#fondnoir").show();
-				});
-				$( "#fondnoir" ).click(function( event ) {
-					$("#fondnoir").hide();
-				});
 
-			});
-		</script>
+		<script src="lightbox/js/jquery-1.7.2.min.js"></script>
+		<script src="lightbox/js/lightbox.js"></script>
+
+
 	</head>
 
 	<body>
-		<div id="fondnoir">
-			<figure>
-				<img src="winter3.png">
-			</figure>
-		</div>
-		
 		<div id="titre">
 			<h1>Mes dessins <span>Morgane Alonso</span></h1>
 		</div>
@@ -159,7 +121,7 @@
 		<div id="post">
 			<a id="winter"></a>
 			<figure>
-				<img src="winter3.png" height="300px">
+				<a href="lightbox/images/winter3.png" rel="lightbox"><img src="lightbox/images/winter3.png" height="300px"></a> 
 				<figcaption>
 					<h2>Winter</h2>
 					<p>Premier dessin avec inkscape</p>
@@ -168,7 +130,7 @@
 			
 			<a id="luna"></a>
 			<figure>
-				<img src="emma luna indigo.jpg.png" height="300px">
+				<a href="lightbox/images/emma luna indigo.png" rel="lightbox"><img src="lightbox/images/emma luna indigo.png" height="300px"></a> 
 				<figcaption>
 					<h2>Luna Indigo</h2>
 					<p>Deuxième dessin avec inkscape</p>
@@ -177,7 +139,7 @@
 			
 			<a id="darling"></a>
 			<figure>
-				<img src="dessin.jpg" height="300px">
+				<a href="lightbox/images/darling.jpg" rel="lightbox"><img src="lightbox/images/darling.jpg" height="300px"></a> 
 				<figcaption>
 					<h2>Darling</h2>
 					<p>Petit crayonné pour ma femme</p>
@@ -187,9 +149,9 @@
 		<nav>
 			<!-- ul:liste li=item a=lien -->
 			<ul>
-				<li><a href="#winter">Winter</a></li>
-				<li><a href="#luna">Luna Indigo</a></li>
-				<li><a href="#darling">Darling</a></li>
+				<li><a href="#winter" >Winter</a></li>
+				<li><a href="#luna" >Luna Indigo</a></li>
+				<li><a href="#darling" >Darling</a></li>
 				<li><a href="#">dessin4</a></li>
 
 			</ul>
