@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Drawings</title>
+		<link href='http://fonts.googleapis.com/css?family=Petit+Formal+Script' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Eagle+Lake' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Kotta+One' rel='stylesheet' type='text/css'>
+		<style type="text/css"> 
+			
+			div#titre {
+				width: 100%;
+				position: fixed;
+				background-color: #68006C;
+				color: white;
+				box-shadow: 0px 5px 0px #FFD100;
+				z-index: 1;
+			}
+
+			h1 {
+				color: white;
+				font-size: 40px;
+				text-align: center;
+				font-family: "Eagle Lake";
+				font-weight: normal;
+				line-height: 40px;
+				margin: 10px;
+			}
+			body {
+				margin: 0;
+				background-color: #D3E5E5;
+			}
+			h1 span {
+				color: #FFE573;
+				font-size: 16px;
+				position: absolute;
+				left: 10px;
+				font-family: "Petit Formal Script";
+				font-weight: bold;
+			}
+			div#post {
+				margin-top: 75px;
+				width: 54%;
+				float: left;
+				margin-left: 15%;
+			}
+
+			div#post figure {
+				background-color: white;
+				border-radius: 10px;
+				margin: 0px;
+				margin-bottom: 5px;
+				text-align: center;
+			}
+
+			div#post figure img {
+				margin: 10px;
+			}
+
+
+			nav {
+				position: fixed;
+				padding-top: 15px;
+				padding-bottom: 15px;
+				margin-top: 75px;
+				width: 15%;
+				left: 70%;
+				background-color: #F16C97;
+				border-radius: 10px;
+			}
+			li {
+				list-style-type: none;
+			}
+
+			ul {
+				padding: 0;
+				margin: 0;
+			}
+			a {
+
+				display: block;
+				line-height: 30px;
+				font-family: "Kotta One";
+				font-size: 18px;
+				color: black;
+				text-decoration: none;
+				padding-left: 15px;
+				background-color: #F16C97;
+				border-radius: 10px;
+				transition: background-color 0.7s;
+				/*transition: border-left-width 0.1s;*/
+
+			}
+
+			a:hover {
+				background-color: #F13C76;
+				border-radius: 10px;
+				color: white;
+				/*border-left-width: 5px;
+				border-left-style: solid;*/
+			}
+
+			figcaption p {
+
+			}
+
+			div#fondnoir {
+				background-color: rgba(0,0,0,0.5);
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 100%;
+				display: none;
+				z-index: 2;
+			}
+
+			div#fondnoir figure {
+				background-color: white;
+				width: 50%;
+				margin: 0 auto;
+				height: 90%;
+				margin-top: 5%;
+				box-shadow: 0 0 20px rgba(0,0,0,0.5);
+				text-align: center;
+			}
+
+			div#fondnoir figure img {
+				height: 90%;
+				margin-top: 5%;
+			}
+
+		</style>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$( document ).ready(function() {
+				$( "#post img" ).click(function( event ) {
+					$("#fondnoir").show();
+				});
+				$( "#fondnoir" ).click(function( event ) {
+					$("#fondnoir").hide();
+				});
+
+			});
+		</script>
+	</head>
+
+	<body>
+		<div id="fondnoir">
+			<figure>
+				<img src="winter3.png">
+			</figure>
+		</div>
+		
+		<div id="titre">
+			<h1>Mes dessins <span>Morgane Alonso</span></h1>
+		</div>
+
+		<div id="post">
+			<a id="winter"></a>
+			<figure>
+				<img src="winter3.png" height="300px">
+				<figcaption>
+					<h2>Winter</h2>
+					<p>Premier dessin avec inkscape</p>
+				</figcaption>
+			</figure>	
+			
+			<a id="luna"></a>
+			<figure>
+				<img src="emma luna indigo.jpg.png" height="300px">
+				<figcaption>
+					<h2>Luna Indigo</h2>
+					<p>Deuxième dessin avec inkscape</p>
+				</figcaption>
+			</figure>		
+			
+			<a id="darling"></a>
+			<figure>
+				<img src="dessin.jpg" height="300px">
+				<figcaption>
+					<h2>Darling</h2>
+					<p>Petit crayonné pour ma femme</p>
+				</figcaption>
+			</figure>			
+		</div>
+		<nav>
+			<!-- ul:liste li=item a=lien -->
+			<ul>
+				<li><a href="#winter">Winter</a></li>
+				<li><a href="#luna">Luna Indigo</a></li>
+				<li><a href="#darling">Darling</a></li>
+				<li><a href="#">dessin4</a></li>
+
+			</ul>
+		</nav>
+
+	</body>
+</html>
